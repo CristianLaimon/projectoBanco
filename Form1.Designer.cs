@@ -29,10 +29,6 @@
         private void InitializeComponent()
         {
             this.dataGridView1 = new System.Windows.Forms.DataGridView();
-            this.buttonRetirar100 = new System.Windows.Forms.Button();
-            this.buttonAbonar100 = new System.Windows.Forms.Button();
-            this.buttonRetirarTodos = new System.Windows.Forms.Button();
-            this.buttonCorteCaja = new System.Windows.Forms.Button();
             this.Column1 = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.Column2 = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.Column3 = new System.Windows.Forms.DataGridViewTextBoxColumn();
@@ -42,6 +38,11 @@
             this.Column6 = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.Column7 = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.Column9 = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.buttonRetirar100 = new System.Windows.Forms.Button();
+            this.buttonAbonar100 = new System.Windows.Forms.Button();
+            this.buttonRetirarTodos = new System.Windows.Forms.Button();
+            this.buttonCorteCaja = new System.Windows.Forms.Button();
+            this.label1 = new System.Windows.Forms.Label();
             ((System.ComponentModel.ISupportInitialize)(this.dataGridView1)).BeginInit();
             this.SuspendLayout();
             // 
@@ -66,46 +67,6 @@
             this.dataGridView1.Size = new System.Drawing.Size(1186, 445);
             this.dataGridView1.TabIndex = 0;
             this.dataGridView1.CellClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.dataGridView1_CellClick);
-            // 
-            // buttonRetirar100
-            // 
-            this.buttonRetirar100.Location = new System.Drawing.Point(201, 521);
-            this.buttonRetirar100.Name = "buttonRetirar100";
-            this.buttonRetirar100.Size = new System.Drawing.Size(145, 49);
-            this.buttonRetirar100.TabIndex = 1;
-            this.buttonRetirar100.Text = "Retirar 100";
-            this.buttonRetirar100.UseVisualStyleBackColor = true;
-            this.buttonRetirar100.Click += new System.EventHandler(this.buttonRetirar100_Click);
-            // 
-            // buttonAbonar100
-            // 
-            this.buttonAbonar100.Location = new System.Drawing.Point(400, 521);
-            this.buttonAbonar100.Name = "buttonAbonar100";
-            this.buttonAbonar100.Size = new System.Drawing.Size(145, 49);
-            this.buttonAbonar100.TabIndex = 2;
-            this.buttonAbonar100.Text = "Abonar 100";
-            this.buttonAbonar100.UseVisualStyleBackColor = true;
-            this.buttonAbonar100.Click += new System.EventHandler(this.buttonAbonar100_Click);
-            // 
-            // buttonRetirarTodos
-            // 
-            this.buttonRetirarTodos.Location = new System.Drawing.Point(588, 521);
-            this.buttonRetirarTodos.Name = "buttonRetirarTodos";
-            this.buttonRetirarTodos.Size = new System.Drawing.Size(145, 49);
-            this.buttonRetirarTodos.TabIndex = 3;
-            this.buttonRetirarTodos.Text = "Retirar (Todos)";
-            this.buttonRetirarTodos.UseVisualStyleBackColor = true;
-            this.buttonRetirarTodos.Click += new System.EventHandler(this.buttonRetirarTodos_Click);
-            // 
-            // buttonCorteCaja
-            // 
-            this.buttonCorteCaja.Location = new System.Drawing.Point(772, 521);
-            this.buttonCorteCaja.Name = "buttonCorteCaja";
-            this.buttonCorteCaja.Size = new System.Drawing.Size(145, 49);
-            this.buttonCorteCaja.TabIndex = 4;
-            this.buttonCorteCaja.Text = "Corte de Caja";
-            this.buttonCorteCaja.UseVisualStyleBackColor = true;
-            this.buttonCorteCaja.Click += new System.EventHandler(this.buttonCorteCaja_Click);
             // 
             // Column1
             // 
@@ -179,21 +140,72 @@
             this.Column9.ReadOnly = true;
             this.Column9.Width = 125;
             // 
+            // buttonRetirar100
+            // 
+            this.buttonRetirar100.Location = new System.Drawing.Point(201, 521);
+            this.buttonRetirar100.Name = "buttonRetirar100";
+            this.buttonRetirar100.Size = new System.Drawing.Size(145, 49);
+            this.buttonRetirar100.TabIndex = 1;
+            this.buttonRetirar100.Text = "Retirar 100";
+            this.buttonRetirar100.UseVisualStyleBackColor = true;
+            this.buttonRetirar100.Click += new System.EventHandler(this.buttonRetirar100_Click);
+            // 
+            // buttonAbonar100
+            // 
+            this.buttonAbonar100.Location = new System.Drawing.Point(400, 521);
+            this.buttonAbonar100.Name = "buttonAbonar100";
+            this.buttonAbonar100.Size = new System.Drawing.Size(145, 49);
+            this.buttonAbonar100.TabIndex = 2;
+            this.buttonAbonar100.Text = "Abonar 100";
+            this.buttonAbonar100.UseVisualStyleBackColor = true;
+            this.buttonAbonar100.Click += new System.EventHandler(this.buttonAbonar100_Click);
+            // 
+            // buttonRetirarTodos
+            // 
+            this.buttonRetirarTodos.Location = new System.Drawing.Point(588, 521);
+            this.buttonRetirarTodos.Name = "buttonRetirarTodos";
+            this.buttonRetirarTodos.Size = new System.Drawing.Size(145, 49);
+            this.buttonRetirarTodos.TabIndex = 3;
+            this.buttonRetirarTodos.Text = "Retirar (Todos)";
+            this.buttonRetirarTodos.UseVisualStyleBackColor = true;
+            this.buttonRetirarTodos.Click += new System.EventHandler(this.buttonRetirarTodos_Click);
+            // 
+            // buttonCorteCaja
+            // 
+            this.buttonCorteCaja.Location = new System.Drawing.Point(772, 521);
+            this.buttonCorteCaja.Name = "buttonCorteCaja";
+            this.buttonCorteCaja.Size = new System.Drawing.Size(145, 49);
+            this.buttonCorteCaja.TabIndex = 4;
+            this.buttonCorteCaja.Text = "Corte de Caja";
+            this.buttonCorteCaja.UseVisualStyleBackColor = true;
+            this.buttonCorteCaja.Click += new System.EventHandler(this.buttonCorteCaja_Click);
+            // 
+            // label1
+            // 
+            this.label1.AutoSize = true;
+            this.label1.Location = new System.Drawing.Point(780, 639);
+            this.label1.Name = "label1";
+            this.label1.Size = new System.Drawing.Size(420, 20);
+            this.label1.TabIndex = 5;
+            this.label1.Text = "Hecho por: Diana Yulissa Sesma Santiago y Kristan Ruíz Limón";
+            // 
             // Form1
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 20F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(1218, 668);
+            this.Controls.Add(this.label1);
             this.Controls.Add(this.buttonCorteCaja);
             this.Controls.Add(this.buttonRetirarTodos);
             this.Controls.Add(this.buttonAbonar100);
             this.Controls.Add(this.buttonRetirar100);
             this.Controls.Add(this.dataGridView1);
             this.Name = "Form1";
-            this.Text = "Form1";
+            this.Text = "Banamex DataBase";
             this.Load += new System.EventHandler(this.Form1_Load);
             ((System.ComponentModel.ISupportInitialize)(this.dataGridView1)).EndInit();
             this.ResumeLayout(false);
+            this.PerformLayout();
 
         }
 
@@ -213,5 +225,6 @@
         private DataGridViewTextBoxColumn Column6;
         private DataGridViewTextBoxColumn Column7;
         private DataGridViewTextBoxColumn Column9;
+        private Label label1;
     }
 }
