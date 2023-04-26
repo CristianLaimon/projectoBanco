@@ -43,6 +43,7 @@
             this.buttonRetirarTodos = new System.Windows.Forms.Button();
             this.buttonCorteCaja = new System.Windows.Forms.Button();
             this.label1 = new System.Windows.Forms.Label();
+            this.checkBoxEvitarAdvertencias = new System.Windows.Forms.CheckBox();
             ((System.ComponentModel.ISupportInitialize)(this.dataGridView1)).BeginInit();
             this.SuspendLayout();
             // 
@@ -189,11 +190,23 @@
             this.label1.TabIndex = 5;
             this.label1.Text = "Hecho por: Diana Yulissa Sesma Santiago y Kristan Ruíz Limón";
             // 
+            // checkBoxEvitarAdvertencias
+            // 
+            this.checkBoxEvitarAdvertencias.AutoSize = true;
+            this.checkBoxEvitarAdvertencias.Location = new System.Drawing.Point(14, 632);
+            this.checkBoxEvitarAdvertencias.Name = "checkBoxEvitarAdvertencias";
+            this.checkBoxEvitarAdvertencias.Size = new System.Drawing.Size(187, 24);
+            this.checkBoxEvitarAdvertencias.TabIndex = 6;
+            this.checkBoxEvitarAdvertencias.Text = "Desactivar advertencias";
+            this.checkBoxEvitarAdvertencias.UseVisualStyleBackColor = true;
+            this.checkBoxEvitarAdvertencias.CheckedChanged += new System.EventHandler(this.checkBoxEvitarAdvertencias_CheckedChanged);
+            // 
             // Form1
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 20F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(1218, 668);
+            this.Controls.Add(this.checkBoxEvitarAdvertencias);
             this.Controls.Add(this.label1);
             this.Controls.Add(this.buttonCorteCaja);
             this.Controls.Add(this.buttonRetirarTodos);
@@ -226,5 +239,6 @@
         private DataGridViewTextBoxColumn Column7;
         private DataGridViewTextBoxColumn Column9;
         private Label label1;
+        private CheckBox checkBoxEvitarAdvertencias;
     }
 }

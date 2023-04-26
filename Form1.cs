@@ -5,6 +5,10 @@ namespace projectoBanco
     public partial class Form1 : Form
     {
         int index;
+        static bool advertenciaToggle; //true= se mostrarán advertencias. False = no se mostrarán advertencias
+
+        public static bool AdvertenciaToggle { get => advertenciaToggle; set => advertenciaToggle = value; }
+
         public Form1()
         {
             InitializeComponent();
@@ -74,8 +78,12 @@ namespace projectoBanco
         private void Form1_Load(object sender, EventArgs e)
         {
             Manejadora.CargarCuentasDefecto(dataGridView1);
-            Manejadora.RefrescarTabla(dataGridView1);
+            Manejadora.RefrescarTabla(dataGridView1);  //Significa que se mostrarán advertencias.
+        }
 
+        private void checkBoxEvitarAdvertencias_CheckedChanged(object sender, EventArgs e)
+        {
+            advertenciaToggle = !advertenciaToggle;
         }
     }
 }

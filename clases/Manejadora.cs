@@ -16,7 +16,7 @@ namespace projectoBanco.clases
         public static void CargarCuentasDefecto(DataGridView dgv)
         {
             cuentasBanco.Add(new Debito(1, "Dianita", 1673, "Debito", 1000, 5));
-            cuentasBanco.Add(new Debito(2, "Beto", 4681, "Debito", 0, 5));
+            cuentasBanco.Add(new Debito(2, "Beto", 4681, "Debito", 3000, 5));
             cuentasBanco.Add(new Debito(3, "Daniel", 4681, "Debito", 2000, 12));
             cuentasBanco.Add(new Debito(4, "Jimena", 1234, "Debito", 3000, 20));
             cuentasBanco.Add(new Debito(5, "David", 4629, "Debito", 4000, 3));
