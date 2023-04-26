@@ -19,7 +19,7 @@ namespace projectoBanco.clases
             tasaIntereses = 0;
         }
 
-        public Credito(int numeroDeCuenta, string nombre, int nip, double saldo, double limiteDeCredito, double disponible, float tasaIntereses) : base(numeroDeCuenta, nombre, nip,saldo)
+        public Credito(int numeroDeCuenta, string nombre, int nip, double saldo, string tipoDeCuenta, double limiteDeCredito, double disponible, float tasaIntereses) : base(numeroDeCuenta, nombre, nip, tipoDeCuenta, saldo)
         {
             this.limiteDeCredito = limiteDeCredito;
             this.disponible = disponible;
@@ -29,5 +29,31 @@ namespace projectoBanco.clases
         public double LimiteDeCredito { get => limiteDeCredito; set => limiteDeCredito = value; }
         public double Disponible { get => disponible; set => disponible = value; }
         public float TasaIntereses { get => tasaIntereses; set => tasaIntereses = value; }
+
+        public override void Retirar(double retiro)
+        {
+            if(disponible - retiro >= 0)
+            {
+                disponible -= retiro;
+                Saldo += retiro;
+            }
+
+        }
+
+        public override void Abonar(double abono)
+        {
+            if(Saldo - abono >= 0)
+            {
+                Saldo -= abono;
+                disponible += abono;
+            }
+
+        }
+
+        public override void CorteCaja(double saldoActual)
+        {
+            double intereses = saldoActual * 0.10;
+            Saldo += intereses;
+        }
     }
 }

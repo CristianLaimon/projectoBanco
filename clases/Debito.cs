@@ -15,11 +15,36 @@ namespace projectoBanco.clases
             numeroDeOperaciones = 0;
         }
 
-        public Debito(int numeroDeCuenta, string nombre, int nip, double saldo, int numeroDeOperaciones) : base(numeroDeCuenta, nombre, nip, saldo)
+        public Debito(int numeroDeCuenta, string nombre, int nip, string tipoDeCuenta, double saldo, int numeroDeOperaciones) : base(numeroDeCuenta, nombre, nip, tipoDeCuenta, saldo)
         {
             this.numeroDeOperaciones = numeroDeOperaciones;
         }
 
         public int NumerodeOperaciones { get => numeroDeOperaciones; set => numeroDeOperaciones = value; }
+
+        public override void Retirar(double retiro)
+        {
+            if (Saldo - retiro >= 0)
+            {
+                Saldo -= retiro;
+                numeroDeOperaciones++;
+            }
+        }
+
+        public override void Abonar(double retiro)
+        {
+            Saldo += retiro;
+            numeroDeOperaciones++;
+        }
+
+        public override void CorteCaja(double numOperaciones)
+        {
+            if(numOperaciones > 10)
+            {
+                double  sobra = numOperaciones - 10;
+                double comision = sobra * 1.50;
+                Saldo -= comision;
+            }
+        }
     }
 }

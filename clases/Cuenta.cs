@@ -13,6 +13,7 @@ namespace projectoBanco.clases
         private string nombre;
         private int nip;
         private double saldo;
+        private string tipoDeCuenta;
 
         public Cuenta()
         {
@@ -20,19 +21,37 @@ namespace projectoBanco.clases
             nombre = string.Empty;
             nip = 0;
             saldo = 0;
+            tipoDeCuenta = string.Empty;
         }
 
-        public Cuenta(int numeroDeCuenta, string nombre, int nip, double saldo)
+        public Cuenta(int numeroDeCuenta, string nombre, int nip, string tipoDeCuenta, double saldo) 
         {
             this.numeroDeCuenta = numeroDeCuenta;
             this.nombre = nombre;
             this.nip = nip;
             this.saldo = saldo;
+            this.tipoDeCuenta = tipoDeCuenta;
         }
 
         public int NumeroDeCuenta { get => numeroDeCuenta; set => numeroDeCuenta = value; }
         public string Nombre { get => nombre; set => nombre = value; }
         public int Nip { get => nip; set => nip = value; }
         public double Saldo { get => saldo; set => saldo = value; }
+        public string TipoDeCuenta { get => tipoDeCuenta; set => tipoDeCuenta = value; }
+
+        public virtual void Retirar(double retiro)
+        {
+
+        }
+
+        public virtual void Abonar(double retiro)
+        {
+            
+        }
+
+        public virtual void CorteCaja(double generico)
+        {
+            
+        }
     }
 }
