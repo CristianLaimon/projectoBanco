@@ -31,9 +31,10 @@ namespace projectoBanco.clases
             }
             else 
             {
-                if(Form1.AdvertenciaToggle == false)
+                if(Form1.AdvertenciaToggle == false && AlreadyChecked == false)
                 {
                     MessageBox.Show("No se puede retirar a " + Nombre + " debido a que tiene fondos insuficientes. Si desea quitar estas advertencias seleccione la casilla 'Desactivar advertencias'", "Advertencia", MessageBoxButtons.OK, MessageBoxIcon.Warning);
+                    AlreadyChecked = true;
                 }
             }
 

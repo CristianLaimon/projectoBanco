@@ -14,6 +14,7 @@ namespace projectoBanco.clases
         private int nip;
         private double saldo;
         private string tipoDeCuenta;
+        private bool alreadyChecked;
 
         public Cuenta()
         {
@@ -38,6 +39,7 @@ namespace projectoBanco.clases
         public int Nip { get => nip; set => nip = value; }
         public double Saldo { get => saldo; set => saldo = value; }
         public string TipoDeCuenta { get => tipoDeCuenta; set => tipoDeCuenta = value; }
+        public bool AlreadyChecked { get => alreadyChecked; set => alreadyChecked = value; }
 
         public virtual void Retirar(double retiro)
         {
