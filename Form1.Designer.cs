@@ -28,6 +28,7 @@
         /// </summary>
         private void InitializeComponent()
         {
+            System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(Form1));
             this.dataGridView1 = new System.Windows.Forms.DataGridView();
             this.Column1 = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.Column2 = new System.Windows.Forms.DataGridViewTextBoxColumn();
@@ -44,6 +45,7 @@
             this.buttonCorteCaja = new System.Windows.Forms.Button();
             this.label1 = new System.Windows.Forms.Label();
             this.checkBoxEvitarAdvertencias = new System.Windows.Forms.CheckBox();
+            this.panel1 = new System.Windows.Forms.Panel();
             ((System.ComponentModel.ISupportInitialize)(this.dataGridView1)).BeginInit();
             this.SuspendLayout();
             // 
@@ -60,7 +62,7 @@
             this.Column6,
             this.Column7,
             this.Column9});
-            this.dataGridView1.Location = new System.Drawing.Point(14, 15);
+            this.dataGridView1.Location = new System.Drawing.Point(12, 70);
             this.dataGridView1.Name = "dataGridView1";
             this.dataGridView1.ReadOnly = true;
             this.dataGridView1.RowHeadersWidth = 51;
@@ -143,7 +145,7 @@
             // 
             // buttonRetirar100
             // 
-            this.buttonRetirar100.Location = new System.Drawing.Point(201, 521);
+            this.buttonRetirar100.Location = new System.Drawing.Point(199, 576);
             this.buttonRetirar100.Name = "buttonRetirar100";
             this.buttonRetirar100.Size = new System.Drawing.Size(145, 49);
             this.buttonRetirar100.TabIndex = 1;
@@ -153,7 +155,7 @@
             // 
             // buttonAbonar100
             // 
-            this.buttonAbonar100.Location = new System.Drawing.Point(400, 521);
+            this.buttonAbonar100.Location = new System.Drawing.Point(398, 576);
             this.buttonAbonar100.Name = "buttonAbonar100";
             this.buttonAbonar100.Size = new System.Drawing.Size(145, 49);
             this.buttonAbonar100.TabIndex = 2;
@@ -163,7 +165,7 @@
             // 
             // buttonRetirarTodos
             // 
-            this.buttonRetirarTodos.Location = new System.Drawing.Point(588, 521);
+            this.buttonRetirarTodos.Location = new System.Drawing.Point(586, 576);
             this.buttonRetirarTodos.Name = "buttonRetirarTodos";
             this.buttonRetirarTodos.Size = new System.Drawing.Size(145, 49);
             this.buttonRetirarTodos.TabIndex = 3;
@@ -173,7 +175,7 @@
             // 
             // buttonCorteCaja
             // 
-            this.buttonCorteCaja.Location = new System.Drawing.Point(772, 521);
+            this.buttonCorteCaja.Location = new System.Drawing.Point(770, 576);
             this.buttonCorteCaja.Name = "buttonCorteCaja";
             this.buttonCorteCaja.Size = new System.Drawing.Size(145, 49);
             this.buttonCorteCaja.TabIndex = 4;
@@ -184,7 +186,7 @@
             // label1
             // 
             this.label1.AutoSize = true;
-            this.label1.Location = new System.Drawing.Point(780, 639);
+            this.label1.Location = new System.Drawing.Point(778, 694);
             this.label1.Name = "label1";
             this.label1.Size = new System.Drawing.Size(420, 20);
             this.label1.TabIndex = 5;
@@ -193,7 +195,7 @@
             // checkBoxEvitarAdvertencias
             // 
             this.checkBoxEvitarAdvertencias.AutoSize = true;
-            this.checkBoxEvitarAdvertencias.Location = new System.Drawing.Point(14, 632);
+            this.checkBoxEvitarAdvertencias.Location = new System.Drawing.Point(12, 687);
             this.checkBoxEvitarAdvertencias.Name = "checkBoxEvitarAdvertencias";
             this.checkBoxEvitarAdvertencias.Size = new System.Drawing.Size(187, 24);
             this.checkBoxEvitarAdvertencias.TabIndex = 6;
@@ -201,11 +203,22 @@
             this.checkBoxEvitarAdvertencias.UseVisualStyleBackColor = true;
             this.checkBoxEvitarAdvertencias.CheckedChanged += new System.EventHandler(this.checkBoxEvitarAdvertencias_CheckedChanged);
             // 
+            // panel1
+            // 
+            this.panel1.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(57)))), ((int)(((byte)(77)))), ((int)(((byte)(52)))));
+            this.panel1.Dock = System.Windows.Forms.DockStyle.Top;
+            this.panel1.Location = new System.Drawing.Point(0, 0);
+            this.panel1.Name = "panel1";
+            this.panel1.Size = new System.Drawing.Size(1209, 32);
+            this.panel1.TabIndex = 7;
+            // 
             // Form1
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 20F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(1218, 668);
+            this.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(189)))), ((int)(((byte)(195)))), ((int)(((byte)(187)))));
+            this.ClientSize = new System.Drawing.Size(1209, 727);
+            this.Controls.Add(this.panel1);
             this.Controls.Add(this.checkBoxEvitarAdvertencias);
             this.Controls.Add(this.label1);
             this.Controls.Add(this.buttonCorteCaja);
@@ -213,6 +226,7 @@
             this.Controls.Add(this.buttonAbonar100);
             this.Controls.Add(this.buttonRetirar100);
             this.Controls.Add(this.dataGridView1);
+            this.Icon = ((System.Drawing.Icon)(resources.GetObject("$this.Icon")));
             this.Name = "Form1";
             this.Text = "Banamex DataBase";
             this.Load += new System.EventHandler(this.Form1_Load);
@@ -240,5 +254,6 @@
         private DataGridViewTextBoxColumn Column9;
         private Label label1;
         private CheckBox checkBoxEvitarAdvertencias;
+        private Panel panel1;
     }
 }
