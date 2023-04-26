@@ -29,6 +29,14 @@ namespace projectoBanco.clases
                 Saldo -= retiro;
                 numeroDeOperaciones++;
             }
+            else if (Saldo != 0)//Esta condición solamente se realizará una vez
+            {
+                MessageBox.Show("Se quiere retirar (100$) más de lo que se tiene disponible en la cuenta de " + Nombre + " por lo que se restará solamente lo restante.", "Advertencia");
+
+                Saldo = 0;
+                NumerodeOperaciones++;
+            }
+
         }
 
         public override void Abonar(double retiro)

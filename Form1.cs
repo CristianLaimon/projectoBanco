@@ -48,15 +48,18 @@ namespace projectoBanco
         {
             foreach (Cuenta cuenta in Manejadora.CuentasBanco)
             {
-                if (cuenta.GetType() == typeof(Debito))
+                if(cuenta.Saldo != 0)
                 {
-                    Debito debito = (Debito)cuenta;
-                    debito.CorteCaja(debito.NumerodeOperaciones);
-                }
-                if (cuenta.GetType() == typeof(Credito))
-                {
-                    Credito credito = (Credito)cuenta;
-                    credito.CorteCaja(credito.Saldo);
+                    if (cuenta.GetType() == typeof(Debito))
+                    {
+                        Debito debito = (Debito)cuenta;
+                        debito.CorteCaja(debito.NumerodeOperaciones);
+                    }
+                    if (cuenta.GetType() == typeof(Credito))
+                    {
+                        Credito credito = (Credito)cuenta;
+                        credito.CorteCaja(credito.Saldo);
+                    }
                 }
             }
 
